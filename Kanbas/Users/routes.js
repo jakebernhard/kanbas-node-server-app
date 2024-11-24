@@ -72,6 +72,7 @@ export default function UserRoutes(app) {
     const status = enrollmentsDao.unEnrollUserInCourse(currentUser._id, cid);
     res.send(status);
   });
+
   app.post("/api/users/current/courses/:cid", async (req, res) => {
     const currentUser = req.session["currentUser"];
     const { cid } = req.params;
